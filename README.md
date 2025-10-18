@@ -21,7 +21,7 @@
 
 ## Установка
 1. Сначала вам нужно скачать [PulseSync](https://pulsesync.dev/).
-2. Теперь качаем [тему](https://github.com/Diramix/Murder-Drones-Theme/releases) желательно в формате (.pext)
+2. Теперь качаем [тему](https://github.com/Diramix/Murder-Drones-Theme/releases). Желательно в формате (.pext)
 3. Устанавливаем тему двойным нажатием на файл.
 4. Если скачали .zip, то разбирайтесь сами, мне лень печатать.
 5. Выберете тему в приложении мода.
