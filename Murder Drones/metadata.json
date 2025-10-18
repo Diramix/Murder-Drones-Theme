@@ -1,0 +1,23 @@
+{
+    "name": "Murder Drones",
+    "image": "image.jpg",
+    "banner": "banner.jpg",
+    "author": [
+        "diram1x"
+    ],
+    "description": "BITE ME!",
+    "type": "theme",
+    "version": "1.0.0",
+    "css": "style.css",
+    "script": "script.js",
+    "allowedUrls": [
+        "http://127.0.0.1:2007/",
+        "https://diram1x.ru/src/assets/",
+        "https://pbs.twimg.com"
+    ],
+    "tags": [
+        "Murder Drones",
+        "Hatsune Miku",
+        "Vocaloid"
+    ]
+}
