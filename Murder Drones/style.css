@@ -28,6 +28,7 @@ https://x.com/Diram1x/status/1979370937087627445
     --ym-background-color-secondary-enabled-blur: #333218;
     --ym-slider-color-primary-enabled: var(--font-color);
     --ym-controls-color-secondary-on_outline-enabled: #a5a33a;
+    --ym-controls-color-secondary-text-enabled_variant: var(--font-color);
 }
 
 * {
