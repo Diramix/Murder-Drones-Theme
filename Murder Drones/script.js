@@ -1,4 +1,4 @@
-// Theeme Changer
+// Theme Changer
 const body = document.body;
 
 const applyTheme = () => {
