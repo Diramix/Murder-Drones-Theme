@@ -6,9 +6,9 @@ https://x.com/Diram1x/status/1979370937087627445
 :root {
     --background: #000500;
     --block-color: #091200;
-    --font-color: #FDFC88;
+    --font-color: #fdfc88;
     --font-inactive-color: #316210;
-    --buttons-hover: #26471D;
+    --buttons-hover: #26471d;
 }
 
 .ym-dark-theme {
@@ -62,8 +62,12 @@ https://x.com/Diram1x/status/1979370937087627445
 }
 
 /* Player */
-[data-test-id="PLAYERBAR_DESKTOP"] {
+[class*="PlayerBar_root"] {
     background-color: var(--block-color) !important;
+}
+
+[class*="BaseSonataControlsDesktop_playButtonIcon"] {
+    color: var(--font-color);
 }
 
 /* Logo Color */
@@ -72,17 +76,18 @@ https://x.com/Diram1x/status/1979370937087627445
 }
 
 /* Vibe block */
-[data-test-id="VIBE_BLOCK"] {
+[class*="VibeBlock_root"] {
     position: relative;
     background-color: #00f;
     margin: 20px 0 20px 20px;
     border-radius: 10px;
-    background: url("http://127.0.0.1:2007/assets/vibe.jpg?name=Murder Drones") no-repeat center;
+    background: url("http://127.0.0.1:2007/assets/vibe.jpg?name=Murder Drones")
+        no-repeat center;
     background-size: cover;
     max-height: 550px;
 }
 
-[data-test-id="VIBE_BLOCK"]::after {
+[class*="VibeBlock_root"]::after {
     content: "";
     position: absolute;
     top: 15%;
@@ -90,7 +95,8 @@ https://x.com/Diram1x/status/1979370937087627445
     bottom: 0;
     width: 100%;
     pointer-events: none;
-    background: url("http://127.0.0.1:2007/assets/uzi.png?name=Murder Drones") no-repeat right center / contain;
+    background: url("http://127.0.0.1:2007/assets/uzi.png?name=Murder Drones")
+        no-repeat right center / contain;
     background-size: contain;
 }
 
@@ -100,34 +106,34 @@ https://x.com/Diram1x/status/1979370937087627445
     }
 }
 
-[data-test-id="MY_VIBE_PAUSE_BUTTON"],
-[data-test-id="MY_VIBE_PAUSE_BUTTON"]:hover {
+[class*="VibeBlock_pauseButton"],
+[class*="VibeBlock_pauseButton"]:hover {
     background: #251427;
-    box-shadow: 0 0 20px #A95CCC !important;
-    color: #A95CCC;
+    box-shadow: 0 0 20px #a95ccc !important;
+    color: #a95ccc;
     fill: #000;
     padding: 5px 20px;
     border-radius: 50px;
-    --ym-controls-color-primary-text-vibe_icon: #A95CCC;
+    --ym-controls-color-primary-text-vibe_icon: #a95ccc;
 }
 
-[data-test-id="MY_VIBE_PLAY_BUTTON"],
-[data-test-id="MY_VIBE_PLAY_BUTTON"]:hover {
+[class*="VibeBlock_playButton"],
+[class*="VibeBlock_playButton"]:hover {
     background: #251427;
-    box-shadow: 0 0 20px #FDFC88 !important;
-    color: #FDFC88;
+    box-shadow: 0 0 20px #fdfc88 !important;
+    color: #fdfc88;
     fill: #000;
     padding: 5px 20px;
     border-radius: 50px;
-    --ym-controls-color-primary-text-vibe_icon: #FDFC88;
+    --ym-controls-color-primary-text-vibe_icon: #fdfc88;
 }
 
-[class*="VibeBlock_settingsButton"]>button,
-[class*="VibeBlock_settingsButton"]>div {
+[class*="VibeBlock_settingsButton"] > button,
+[class*="VibeBlock_settingsButton"] > div {
     background-color: var(--block-color);
 }
 
-[class*="VibeBlock_settingsButton"]>button:hover {
+[class*="VibeBlock_settingsButton"] > button:hover {
     background-color: var(--buttons-hover);
 }
 
@@ -136,18 +142,20 @@ https://x.com/Diram1x/status/1979370937087627445
 }
 
 /* Fullscreen background */
-[data-test-id="FULLSCREEN_PLAYER_MODAL"] {
+[class*="FullscreenPlayerDesktop_important"] {
     background-color: var(--background) !important;
-    background: url("http://127.0.0.1:2007/assets/lyrics.jpg?name=Murder Drones") no-repeat center;
-    background-size: contain;
+    background: url("http://127.0.0.1:2007/assets/lyrics.jpg?name=Murder Drones")
+        no-repeat center;
+    background-size: cover;
 }
 
 /* Only display: none; */
 [class*="UserProfile_plusLink"],
-[data-test-id="VIBE_ANIMATION"],
+[class*="VibeAnimation_enter_done"],
 [class*="SyncLyrics_content"]:after,
 [class*="SyncLyrics_content"]:before,
-[data-test-id="PLAY_QUEUE"]:after,
-[data-test-id="PLAY_QUEUE"]:before {
+[class*="PlayQueue_root"]:after,
+[class*="PlayQueue_root"]:before,
+[class*="NavbarDesktop_subTitle_withCursorPointer"] {
     display: none;
 }
