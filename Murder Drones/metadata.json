@@ -2,12 +2,10 @@
     "name": "Murder Drones",
     "image": "image.jpg",
     "banner": "banner.jpg",
-    "author": [
-        "diram1x"
-    ],
+    "author": ["diram1x"],
     "description": "BITE ME!",
     "type": "theme",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "css": "style.css",
     "script": "script.js",
     "allowedUrls": [
@@ -15,7 +13,5 @@
         "https://diram1x.ru/src/assets/",
         "https://pbs.twimg.com"
     ],
-    "tags": [
-        "Murder Drones"
-    ]
+    "tags": ["Murder Drones"]
 }
