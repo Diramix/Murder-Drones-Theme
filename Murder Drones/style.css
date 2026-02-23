@@ -36,12 +36,7 @@ https://x.com/Diram1x/status/1979370937087627445
 }
 
 /* ВЫКУСИ! */
-[class*="TitleBar_pulseText"] {
-    visibility: hidden;
-}
-
-[class*="TitleBar_pulseText"]:after {
-    visibility: visible;
+.biteMeText {
     content: "BITE ME!";
     color: var(--font-color);
     font-weight: 600;
