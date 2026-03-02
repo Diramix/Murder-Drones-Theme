@@ -18,19 +18,32 @@ const observer = new MutationObserver(() => applyTheme());
 
 observer.observe(body, { attributes: true, attributeFilter: ["class"] });
 
-// PulseText remover
-const pulseTextObserver = new MutationObserver(() => {
-    document.querySelectorAll('[class*="TitleBar_pulseText"]').forEach((el) => {
-        el.classList.forEach((cls) => {
-            if (cls.includes("TitleBar_pulseText")) {
-                el.classList.replace(cls, "biteMeText");
-                el.textContent = `BITE ME!`;
-            }
+// TitleBar text changer
+const titleBarTextElement = ["TitleBar_pulseText", "TitleBar_nextText"];
+
+const titleBarTextObserver = new MutationObserver(() => {
+    document
+        .querySelectorAll(
+            titleBarTextElement
+                .map((cls) => `[class*="${cls}"]:not(.biteMeText)`)
+                .join(", "),
+        )
+        .forEach((el) => {
+            el.className = [...el.classList]
+                .map((cls) =>
+                    titleBarTextElement.some((t) => cls.includes(t))
+                        ? "biteMeText"
+                        : cls,
+                )
+                .join(" ");
+
+            el.textContent = "BITE ME!";
         });
-    });
 });
 
-pulseTextObserver.observe(document.body, {
+// Запуск observer
+titleBarTextObserver.observe(document.body, {
     childList: true,
     subtree: true,
+    characterData: true,
 });

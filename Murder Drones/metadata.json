@@ -2,10 +2,10 @@
     "name": "Murder Drones",
     "image": "image.jpg",
     "banner": "banner.jpg",
-    "author": ["diram1x"],
+    "author": ["Diramix"],
     "description": "BITE ME!",
     "type": "theme",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "css": "style.css",
     "script": "script.js",
     "allowedUrls": [
