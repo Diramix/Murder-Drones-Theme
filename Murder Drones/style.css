@@ -31,10 +31,6 @@ https://x.com/Diram1x/status/1979370937087627445
     --ym-controls-color-secondary-text-enabled_variant: var(--font-color);
 }
 
-* {
-    --ym-background-color-primary-enabled-basic: 0;
-}
-
 /* ВЫКУСИ! */
 .TitleBar_bypassText,
 .TitleBar_nextText {
