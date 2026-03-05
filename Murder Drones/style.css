@@ -36,7 +36,8 @@ https://x.com/Diram1x/status/1979370937087627445
 }
 
 /* ВЫКУСИ! */
-.biteMeText {
+.TitleBar_bypassText,
+.TitleBar_nextText {
     color: var(--font-color) !important;
     font-weight: 600 !important;
     margin-right: 20px !important;

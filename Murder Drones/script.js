@@ -18,32 +18,53 @@ const observer = new MutationObserver(() => applyTheme());
 
 observer.observe(body, { attributes: true, attributeFilter: ["class"] });
 
-// TitleBar text changer
-const titleBarTextElement = ["TitleBar_pulseText", "TitleBar_nextText"];
+// TitleBar text bypass & mod
+function waitForElement(selector, callback) {
+    const el = document.querySelector(selector);
+    if (el) {
+        callback(el);
+        return;
+    }
 
-const titleBarTextObserver = new MutationObserver(() => {
-    document
-        .querySelectorAll(
-            titleBarTextElement
-                .map((cls) => `[class*="${cls}"]:not(.biteMeText)`)
-                .join(", "),
-        )
-        .forEach((el) => {
-            el.className = [...el.classList]
-                .map((cls) =>
-                    titleBarTextElement.some((t) => cls.includes(t))
-                        ? "biteMeText"
-                        : cls,
-                )
-                .join(" ");
+    const clientObserver = new MutationObserver(() => {
+        const el = document.querySelector(selector);
+        if (el) {
+            clientObserver.disconnect();
+            callback(el);
+        }
+    });
 
-            el.textContent = "BITE ME!";
-        });
+    clientObserver.observe(document.body, { childList: true, subtree: true });
+}
+
+// PulseSync
+waitForElement('[class*="TitleBar_pulseText"]', () => {
+    const titleBarTextElement = ["TitleBar_pulseText"];
+    const titleBarTextObserver = new MutationObserver(() => {
+        document
+            .querySelectorAll(
+                titleBarTextElement
+                    .map((cls) => `[class*="${cls}"]:not(.TitleBar_bypassText)`)
+                    .join(", "),
+            )
+            .forEach((el) => {
+                el.className = [...el.classList]
+                    .map((cls) =>
+                        titleBarTextElement.some((t) => cls.includes(t))
+                            ? "TitleBar_bypassText"
+                            : cls,
+                    )
+                    .join(" ");
+            });
+    });
+    titleBarTextObserver.observe(document.body, {
+        childList: true,
+        subtree: true,
+        characterData: true,
+    });
 });
 
-// Запуск observer
-titleBarTextObserver.observe(document.body, {
-    childList: true,
-    subtree: true,
-    characterData: true,
+// Next Music
+waitForElement('[class*="TitleBar_nextText"]', () => {
+    window.nextMusic.nextText("BITE ME!");
 });
