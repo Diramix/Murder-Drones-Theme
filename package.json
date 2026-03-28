@@ -50,6 +50,6 @@
         ]
     },
     "devDependencies": {
-        "ymtm": "github:Diramix/ymtm#2.0.0"
+        "ymtm": "github:Diramix/ymtm#2.1.0"
     }
 }
