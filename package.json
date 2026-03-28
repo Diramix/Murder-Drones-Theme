@@ -33,7 +33,7 @@
         }
     },
     "web": {
-        "icon": "https://github.com/Diramix/Murder-Drones-Theme/blob/main/Murder%20Drones/image.jpg?raw=true",
+        "icon": "https://github.com/Diramix/Murder-Drones-Theme/blob/main/Murder%20Drones/icon.jpg?raw=true",
         "onefile": {
             "artifactName": "${theme.name}_${theme.version}_${build.package}.user.js"
         },
@@ -50,6 +50,6 @@
         ]
     },
     "devDependencies": {
-        "ymtm": "github:Diramix/ymtm#1.0.1"
+        "ymtm": "github:Diramix/ymtm#2.0.0"
     }
 }
