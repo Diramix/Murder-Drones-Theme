@@ -20,8 +20,8 @@
         ]
     },
     "nextmusic": {
-        "zip": {
-            "artifactName": "${theme.name}_${theme.version}_${build.package}.zip"
+        "tarGz": {
+            "artifactName": "${theme.name}_${theme.version}_${build.package}.tar.gz"
         }
     },
     "pulsesync": {
