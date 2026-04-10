@@ -1,23 +1,3 @@
-// Theme Changer
-const body = document.body;
-
-const applyTheme = () => {
-    if (
-        !body.classList.contains("ym-dark-theme") &&
-        !body.classList.contains("ym-light-theme")
-    ) {
-        body.classList.add("ym-dark-theme");
-    } else if (body.classList.contains("ym-light-theme")) {
-        body.classList.replace("ym-light-theme", "ym-dark-theme");
-    }
-};
-
-applyTheme();
-
-const observer = new MutationObserver(() => applyTheme());
-
-observer.observe(body, { attributes: true, attributeFilter: ["class"] });
-
 // TitleBar text bypass & mod
 function waitForElement(selector, callback) {
     const el = document.querySelector(selector);
@@ -62,9 +42,4 @@ waitForElement('[class*="TitleBar_pulseText"]', () => {
         subtree: true,
         characterData: true,
     });
-});
-
-// Next Music
-waitForElement('[class*="TitleBar_nextText"]', () => {
-    window.nextMusic.nextText("BITE ME!");
 });

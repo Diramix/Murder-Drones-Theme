@@ -5,13 +5,9 @@
     "author": ["Diramix"],
     "description": "BITE ME!",
     "type": "theme",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "css": "style.css",
     "script": "script.js",
-    "allowedUrls": [
-        "http://127.0.0.1:2007/",
-        "https://diram1x.ru/src/assets/",
-        "https://pbs.twimg.com"
-    ],
+    "allowedUrls": ["http://127.0.0.1:2007/"],
     "tags": ["Murder Drones"]
 }

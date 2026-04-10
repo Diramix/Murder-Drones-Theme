@@ -3,17 +3,15 @@
     "description": "BITE ME!",
     "author": "Diramix",
     "license": "CC0-1.0",
-    "directories": {
-        "doc": "doc"
-    },
     "scripts": {
+        "dev": "ymtm dev",
         "build": "ymtm build",
         "build:nextmusic": "ymtm build nextmusic",
         "build:pulsesync": "ymtm build pulsesync",
         "build:web": "ymtm build web"
     },
     "build": {
-        "package": [
+        "targets": [
             "nextmusic",
             "pulsesync",
             "web"
@@ -21,21 +19,21 @@
     },
     "nextmusic": {
         "tarGz": {
-            "artifactName": "${theme.name}_${theme.version}_${build.package}.tar.gz"
+            "artifactName": "${addon.name}_${addon.version}_${build.package}.tar.gz"
         }
     },
     "pulsesync": {
         "zip": {
-            "artifactName": "${theme.name}_${theme.version}_${build.package}.zip"
+            "artifactName": "${addon.name}_${addon.version}_${build.package}.zip"
         },
         "pext": {
-            "artifactName": "${theme.name}_${theme.version}_${build.package}.pext"
+            "artifactName": "${addon.name}_${addon.version}_${build.package}.pext"
         }
     },
     "web": {
         "icon": "https://github.com/Diramix/Murder-Drones-Theme/blob/main/Murder%20Drones/icon.jpg?raw=true",
         "onefile": {
-            "artifactName": "${theme.name}_${theme.version}_${build.package}.user.js"
+            "artifactName": "${addon.name}_${addon.version}_${build.package}.user.js"
         },
         "replaceLink": [
             {
@@ -50,6 +48,6 @@
         ]
     },
     "devDependencies": {
-        "ymtm": "github:Diramix/ymtm#2.1.0"
+        "@diram1x/ymtm": "^3.0.0"
     }
 }

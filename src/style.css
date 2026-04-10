@@ -31,14 +31,6 @@ https://x.com/Diram1x/status/1979370937087627445
     --ym-controls-color-secondary-text-enabled_variant: var(--font-color);
 }
 
-/* ВЫКУСИ! */
-.TitleBar_bypassText,
-.TitleBar_nextText {
-    color: var(--font-color) !important;
-    font-weight: 600 !important;
-    margin-right: 20px !important;
-}
-
 /* Slider background */
 [class*="ChangeTimecode_slider"] {
     --slider-thumb-box-shadow-color: #0000;
