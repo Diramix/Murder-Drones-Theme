@@ -1,5 +1,7 @@
-// TitleBar text bypass & mod
-function waitForElement(selector, callback) {
+function waitForElement(
+    selector: string,
+    callback: (el: Element) => void,
+): void {
     const el = document.querySelector(selector);
     if (el) {
         callback(el);
@@ -14,12 +16,16 @@ function waitForElement(selector, callback) {
         }
     });
 
-    clientObserver.observe(document.body, { childList: true, subtree: true });
+    clientObserver.observe(document.body, {
+        childList: true,
+        subtree: true,
+    });
 }
 
 // PulseSync
 waitForElement('[class*="TitleBar_pulseText"]', () => {
-    const titleBarTextElement = ["TitleBar_pulseText"];
+    const titleBarTextElement: string[] = ["TitleBar_pulseText"];
+
     const titleBarTextObserver = new MutationObserver(() => {
         document
             .querySelectorAll(
@@ -27,16 +33,18 @@ waitForElement('[class*="TitleBar_pulseText"]', () => {
                     .map((cls) => `[class*="${cls}"]:not(.TitleBar_bypassText)`)
                     .join(", "),
             )
-            .forEach((el) => {
-                el.className = [...el.classList]
-                    .map((cls) =>
-                        titleBarTextElement.some((t) => cls.includes(t))
+            .forEach((el: Element) => {
+                el.className = [].slice
+                    .call(el.classList)
+                    .map((cls: string) =>
+                        titleBarTextElement.some((t) => cls.indexOf(t) !== -1)
                             ? "TitleBar_bypassText"
                             : cls,
                     )
                     .join(" ");
             });
     });
+
     titleBarTextObserver.observe(document.body, {
         childList: true,
         subtree: true,

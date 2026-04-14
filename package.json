@@ -3,6 +3,7 @@
     "description": "BITE ME!",
     "author": "Diramix",
     "license": "CC0-1.0",
+    "type": "module",
     "scripts": {
         "dev": "ymtm dev",
         "build": "ymtm build",
@@ -11,7 +12,7 @@
         "build:web": "ymtm build web"
     },
     "build": {
-        "targets": [
+        "package": [
             "nextmusic",
             "pulsesync",
             "web"
@@ -48,6 +49,7 @@
         ]
     },
     "devDependencies": {
-        "@diram1x/ymtm": "^3.0.0"
+        "@diram1x/ymtm": "^3.1.0",
+        "typescript": "^6.0.2"
     }
 }
