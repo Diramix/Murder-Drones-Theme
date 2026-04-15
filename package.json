@@ -32,7 +32,7 @@
         }
     },
     "web": {
-        "icon": "https://github.com/Diramix/Murder-Drones-Theme/blob/main/Murder%20Drones/icon.jpg?raw=true",
+        "icon": "https://github.com/Diramix/Murder-Drones-Theme/blob/main/src/assets/branding/icon.jpg?raw=true",
         "onefile": {
             "artifactName": "${addon.name}_${addon.version}_${build.package}.user.js"
         },
