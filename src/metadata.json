@@ -1,13 +1,13 @@
 {
-    "name": "Murder Drones",
-    "image": "icon.jpg",
-    "banner": "banner.jpg",
-    "author": ["Diramix"],
-    "description": "BITE ME!",
-    "type": "theme",
-    "version": "1.0.8",
-    "css": "style.css",
-    "script": "script.js",
-    "allowedUrls": ["http://127.0.0.1:2007/"],
-    "tags": ["Murder Drones"]
+	"name": "Murder Drones",
+	"image": "icon.jpg",
+	"banner": "banner.jpg",
+	"author": ["Diramix"],
+	"description": "BITE ME!",
+	"type": "theme",
+	"version": "1.0.9",
+	"css": "style.css",
+	"script": "script.js",
+	"allowedUrls": ["http://127.0.0.1:2007/"],
+	"tags": ["Murder Drones"]
 }
