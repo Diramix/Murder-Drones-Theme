@@ -1,12 +1,12 @@
 {
-    "compilerOptions": {
-        "strict": true,
-        "allowSyntheticDefaultImports": true,
-        "isolatedModules": true,
-        "noUncheckedSideEffectImports": true,
-        "moduleDetection": "force",
-        "skipLibCheck": false,
-        "module": "CommonJS",
-        "moduleResolution": "node",
-    },
+	"compilerOptions": {
+		"strict": true,
+		"allowSyntheticDefaultImports": true,
+		"isolatedModules": true,
+		"noUncheckedSideEffectImports": true,
+		"moduleDetection": "force",
+		"skipLibCheck": false,
+		"module": "Node16",
+		"moduleResolution": "Node16",
+	},
 }

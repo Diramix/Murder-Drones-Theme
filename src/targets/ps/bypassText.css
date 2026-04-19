@@ -1,5 +1,6 @@
-.TitleBar_bypassText {
-    color: var(--font-color) !important;
-    font-weight: 600 !important;
-    margin-right: 20px !important;
+.TitleBar_bypassText,
+[class*="TitleBar_pulseText"] {
+	color: var(--font-color) !important;
+	font-weight: 600 !important;
+	margin-right: 20px !important;
 }

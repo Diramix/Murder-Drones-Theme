@@ -1,53 +1,65 @@
+import { titleText } from "../../script";
+
+// Premium user check
+(async () => {
+	const isPremium = await window.IS_PREMIUM_USER();
+
+	if (isPremium) {
+		setPremiumText();
+	}
+})();
+
+// Waiting for element availability
 function waitForElement(
-    selector: string,
-    callback: (el: Element) => void,
+	selector: string,
+	callback: (el: Element) => void,
 ): void {
-    const el = document.querySelector(selector);
-    if (el) {
-        callback(el);
-        return;
-    }
+	const el = document.querySelector(selector);
 
-    const clientObserver = new MutationObserver(() => {
-        const el = document.querySelector(selector);
-        if (el) {
-            clientObserver.disconnect();
-            callback(el);
-        }
-    });
+	if (el) {
+		callback(el);
+		return;
+	}
 
-    clientObserver.observe(document.body, {
-        childList: true,
-        subtree: true,
-    });
+	const observer = new MutationObserver(() => {
+		const el = document.querySelector(selector);
+
+		if (el) {
+			observer.disconnect();
+			callback(el);
+		}
+	});
+
+	observer.observe(document.body, { childList: true, subtree: true });
 }
 
-// PulseSync
-waitForElement('[class*="TitleBar_pulseText"]', () => {
-    const titleBarTextElement: string[] = ["TitleBar_pulseText"];
+// Custom TitleText Setup
+function setPremiumText() {
+	const watched = new WeakSet<Element>();
+	const pulseText = '[class*="TitleBar_pulseText"]';
 
-    const titleBarTextObserver = new MutationObserver(() => {
-        document
-            .querySelectorAll(
-                titleBarTextElement
-                    .map((cls) => `[class*="${cls}"]:not(.TitleBar_bypassText)`)
-                    .join(", "),
-            )
-            .forEach((el: Element) => {
-                el.className = [].slice
-                    .call(el.classList)
-                    .map((cls: string) =>
-                        titleBarTextElement.some((t) => cls.indexOf(t) !== -1)
-                            ? "TitleBar_bypassText"
-                            : cls,
-                    )
-                    .join(" ");
-            });
-    });
+	function watchTextContent(el: Element) {
+		new MutationObserver(() => {
+			if (el.textContent !== titleText) {
+				el.textContent = titleText;
+			}
+		}).observe(el, { childList: true, subtree: true, characterData: true });
+	}
 
-    titleBarTextObserver.observe(document.body, {
-        childList: true,
-        subtree: true,
-        characterData: true,
-    });
-});
+	function processElement() {
+		const pulseTextSel = document.querySelector(pulseText);
+		if (!pulseTextSel || watched.has(pulseTextSel)) return;
+		watched.add(pulseTextSel);
+		pulseTextSel.textContent = titleText;
+		watchTextContent(pulseTextSel);
+	}
+
+	waitForElement(pulseText, () => {
+		processElement();
+
+		new MutationObserver(processElement).observe(document.body, {
+			childList: true,
+			subtree: true,
+		});
+	});
+}

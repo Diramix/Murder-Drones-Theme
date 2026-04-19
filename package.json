@@ -1,55 +1,55 @@
 {
-    "name": "murder-drones-theme",
-    "description": "BITE ME!",
-    "author": "Diramix",
-    "license": "CC0-1.0",
-    "type": "module",
-    "scripts": {
-        "dev": "ymtm dev",
-        "build": "ymtm build",
-        "build:nextmusic": "ymtm build nextmusic",
-        "build:pulsesync": "ymtm build pulsesync",
-        "build:web": "ymtm build web"
-    },
-    "build": {
-        "package": [
-            "nextmusic",
-            "pulsesync",
-            "web"
-        ]
-    },
-    "nextmusic": {
-        "tarGz": {
-            "artifactName": "${addon.name}_${addon.version}_${build.package}.tar.gz"
-        }
-    },
-    "pulsesync": {
-        "zip": {
-            "artifactName": "${addon.name}_${addon.version}_${build.package}.zip"
-        },
-        "pext": {
-            "artifactName": "${addon.name}_${addon.version}_${build.package}.pext"
-        }
-    },
-    "web": {
-        "icon": "https://github.com/Diramix/Murder-Drones-Theme/blob/main/src/assets/branding/icon.jpg?raw=true",
-        "onefile": {
-            "artifactName": "${addon.name}_${addon.version}_${build.package}.user.js"
-        },
-        "replaceLink": [
-            {
-                "from": "http://127.0.0.1:2007/assets/vibe.jpg?name=Murder Drones"
-            },
-            {
-                "from": "http://127.0.0.1:2007/assets/uzi.png?name=Murder Drones"
-            },
-            {
-                "from": "http://127.0.0.1:2007/assets/lyrics.jpg?name=Murder Drones"
-            }
-        ]
-    },
-    "devDependencies": {
-        "@diram1x/ymtm": "^3.1.0",
-        "typescript": "^6.0.2"
-    }
+	"name": "murder-drones-theme",
+	"description": "BITE ME!",
+	"author": "Diramix",
+	"license": "CC0-1.0",
+	"type": "module",
+	"scripts": {
+		"dev": "ymtm dev",
+		"build": "ymtm build",
+		"build:nextmusic": "ymtm build nextmusic",
+		"build:pulsesync": "ymtm build pulsesync",
+		"build:web": "ymtm build web"
+	},
+	"build": {
+		"package": [
+			"nextmusic",
+			"pulsesync",
+			"web"
+		]
+	},
+	"nextmusic": {
+		"tarGz": {
+			"artifactName": "${addon.name}_${addon.version}_${build.package}.tar.gz"
+		}
+	},
+	"pulsesync": {
+		"zip": {
+			"artifactName": "${addon.name}_${addon.version}_${build.package}.zip"
+		},
+		"pext": {
+			"artifactName": "${addon.name}_${addon.version}_${build.package}.pext"
+		}
+	},
+	"web": {
+		"icon": "https://github.com/Diramix/Murder-Drones-Theme/blob/main/src/assets/branding/icon.jpg?raw=true",
+		"onefile": {
+			"artifactName": "${addon.name}_${addon.version}_${build.package}.user.js"
+		},
+		"replaceLink": [
+			{
+				"from": "http://127.0.0.1:2007/assets/vibe.jpg?name=Murder Drones"
+			},
+			{
+				"from": "http://127.0.0.1:2007/assets/uzi.png?name=Murder Drones"
+			},
+			{
+				"from": "http://127.0.0.1:2007/assets/lyrics.jpg?name=Murder Drones"
+			}
+		]
+	},
+	"devDependencies": {
+		"@diram1x/ymtm": "^3.1.0",
+		"typescript": "^6.0.2"
+	}
 }

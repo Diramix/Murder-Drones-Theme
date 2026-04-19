@@ -1,1 +1,3 @@
-window.nextmusicApi.nextText("BITE ME!");
+import { titleText } from "../../script";
+
+window.nextmusicApi.nextText(titleText);
