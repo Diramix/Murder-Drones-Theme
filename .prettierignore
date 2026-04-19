@@ -1,0 +1,7 @@
+node_modules
+dist
+build
+*.tar.gz
+*.zip
+*.pext
+*.user.js

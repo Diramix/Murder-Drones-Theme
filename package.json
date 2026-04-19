@@ -9,7 +9,9 @@
 		"build": "ymtm build",
 		"build:nextmusic": "ymtm build nextmusic",
 		"build:pulsesync": "ymtm build pulsesync",
-		"build:web": "ymtm build web"
+		"build:web": "ymtm build web",
+		"format": "prettier --write .",
+		"format:check": "prettier --check ."
 	},
 	"build": {
 		"package": [
@@ -50,6 +52,7 @@
 	},
 	"devDependencies": {
 		"@diram1x/ymtm": "^3.1.0",
+		"prettier": "^3.8.3",
 		"typescript": "^6.0.2"
 	}
 }
