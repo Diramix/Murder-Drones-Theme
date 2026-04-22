@@ -1,4 +1,4 @@
-import { titleText } from "../../script";
+import { titleText } from "../../static/scripts/script";
 
 // Premium user check
 (async () => {

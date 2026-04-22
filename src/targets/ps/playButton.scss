@@ -1,0 +1,16 @@
+@use "../../static/styles/var" as *;
+@use "../../static/styles/mixins" as *;
+
+[data-test-id="MY_VIBE_PAUSE_BUTTON"] {
+	&,
+	&:hover {
+		@include vibe-button(#a95ccc);
+	}
+}
+
+[data-test-id="MY_VIBE_PLAY_BUTTON"] {
+	&,
+	&:hover {
+		@include vibe-button($font-color);
+	}
+}

@@ -1,5 +1,7 @@
+@use "../../static/styles/var" as *;
+
 .TitleBar_nextText {
-	color: var(--font-color) !important;
+	color: $font-color !important;
 	font-weight: 600 !important;
 	margin-right: 20px !important;
 }

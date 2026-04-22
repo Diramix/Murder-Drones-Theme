@@ -1,0 +1,9 @@
+@use "../../static/styles/var" as *;
+@use "../../static/styles/mixins" as *;
+
+[class*="VibeBlock_playButton"] {
+	&,
+	&:hover {
+		@include vibe-button($font-color);
+	}
+}

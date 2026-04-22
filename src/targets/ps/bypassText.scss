@@ -1,6 +1,8 @@
+@use "../../static/styles/var" as *;
+
 .TitleBar_bypassText,
 [class*="TitleBar_pulseText"] {
-	color: var(--font-color) !important;
+	color: $font-color !important;
 	font-weight: 600 !important;
 	margin-right: 20px !important;
 }
