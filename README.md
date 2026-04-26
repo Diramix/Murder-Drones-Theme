@@ -5,7 +5,8 @@
 
 ### Screenshots
 
-![2](https://github.com/user-attachments/assets/eea437ce-699b-4a9c-8b79-9030adf9104b)
+![2](https://github.com/user-attachments/assets/6108f519-4aa2-46f2-8ac7-c541f0e0fa90)
+![3](https://github.com/user-attachments/assets/ae12f703-f89f-4df2-a281-69052ad102a3)
 
 ## Contacts
 
