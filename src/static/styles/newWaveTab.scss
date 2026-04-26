@@ -1,0 +1,14 @@
+[class*="DefaultLayout_rootNewWave"] {
+	background:
+		linear-gradient(
+			to right,
+			#000 2%,
+			rgba(0, 0, 0, 0) 40%,
+			var(--vibe-gradient-stop-0) 100%
+		),
+		url("http://127.0.0.1:2007/assets/vibe.jpg?name=Murder Drones");
+
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
