@@ -1,11 +1,12 @@
-name: Auto Release Notes
+name: Release
 
 on:
   release:
-    types: [created]
+    types: [created, published]
 
 jobs:
   generate-notes:
+    if: github.event.action == 'created'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -41,3 +42,29 @@ jobs:
               release_id: release.id,
               body: process.env.CLIFF_OUTPUT,
             });
+
+  build:
+    if: github.event.action == 'published'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: release/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
