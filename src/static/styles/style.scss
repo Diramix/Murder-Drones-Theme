@@ -23,6 +23,7 @@ https://x.com/Diram1x/status/1979370937087627445
 	--ym-slider-color-primary-enabled: #{$font-color};
 	--ym-controls-color-secondary-on_outline-enabled: #a5a33a;
 	--ym-controls-color-secondary-text-enabled_variant: #{$font-color};
+	--ym-logo-color-primary-text: #{$font-color};
 }
 
 // Slider
@@ -50,7 +51,9 @@ https://x.com/Diram1x/status/1979370937087627445
 
 // Logo
 [class*="NavbarDesktop_logo"] {
-	color: $font-color;
+	* {
+		color: $font-color;
+	}
 }
 
 // Vibe Block
