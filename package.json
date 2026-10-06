@@ -50,8 +50,8 @@
 		]
 	},
 	"devDependencies": {
-		"@diram1x/ymtm": "^4.0.0",
-		"prettier": "^3.8.5",
-		"typescript": "^6.0.3"
+		"@diram1x/ymtm": "^4.2.0",
+		"prettier": "^3.9.9",
+		"typescript": "^7.0.2"
 	}
 }
