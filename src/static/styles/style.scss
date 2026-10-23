@@ -4,6 +4,7 @@ https://x.com/Diram1x/status/1979370937087627445
 */
 
 @use "./var" as *;
+@use "./mixins" as *;
 
 .ym-dark-theme {
 	--ym-background-color-primary-enabled-basic: #{$background};
@@ -38,6 +39,14 @@ https://x.com/Diram1x/status/1979370937087627445
 
 [class*="Meta_artistCaption"] {
 	--text-enabled-color: #{$font-inactive-color};
+}
+
+// Play Button
+[class*="VibeBlock_playButton"] {
+	&,
+	&:hover {
+		@include vibe-button($font-color);
+	}
 }
 
 // Player

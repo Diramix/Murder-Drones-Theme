@@ -1,3 +1,3 @@
-const API = window.nextmusicApi
+const API = window.nextmusicApi;
 
-API?.visualizer?.setAccentColor("#ba63b4")
+API?.visualizer?.setAccentColor("#ba63b4");

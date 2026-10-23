@@ -1,21 +1,22 @@
 {
 	"name": "murder-drones-theme",
+	"addonName": "Murder Drones",
+	"version": "1.1.5",
+	"packageManager": "pnpm@12.15.0",
 	"description": "BITE ME!",
 	"license": "CC0-1.0",
 	"type": "module",
 	"scripts": {
-		"dev": "ymtm dev",
-		"build": "ymtm build",
-		"build:nextmusic": "ymtm build nextmusic",
-		"build:pulsesync": "ymtm build pulsesync",
-		"build:web": "ymtm build web",
+		"dev": "nmtools dev",
+		"build": "nmtools build",
+		"build:nextmusic": "nmtools build nextmusic",
+		"build:web": "nmtools build web",
 		"format": "prettier --write .",
 		"format:check": "prettier --check ."
 	},
 	"build": {
-		"package": [
+		"targets": [
 			"nextmusic",
-			"pulsesync",
 			"web"
 		]
 	},
@@ -24,17 +25,9 @@
 			"artifactName": "${addon.name}_${addon.version}_${build.package}.tar.gz"
 		}
 	},
-	"pulsesync": {
-		"zip": {
-			"artifactName": "${addon.name}_${addon.version}_${build.package}.zip"
-		},
-		"pext": {
-			"artifactName": "${addon.name}_${addon.version}_${build.package}.pext"
-		}
-	},
 	"web": {
 		"icon": "https://github.com/Diramix/Murder-Drones-Theme/blob/main/src/assets/branding/icon.jpg?raw=true",
-		"onefile": {
+		"userscript": {
 			"artifactName": "${addon.name}_${addon.version}_${build.package}.user.js"
 		},
 		"replaceLink": [
@@ -50,8 +43,8 @@
 		]
 	},
 	"devDependencies": {
-		"@diram1x/ymtm": "^4.2.0",
-		"prettier": "^3.9.9",
+		"@web-next-music/nmtools": "^5.0.0",
+		"prettier": "^3.9.10",
 		"typescript": "^7.0.2"
 	}
 }
