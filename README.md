@@ -3,6 +3,9 @@
 
 # Murder Drones
 
+> [!IMPORTANT]
+> PulseSync support has been suspended indefinitely due to an update to the add-on system.
+
 ### Screenshots
 
 ![2](https://github.com/user-attachments/assets/6108f519-4aa2-46f2-8ac7-c541f0e0fa90)
